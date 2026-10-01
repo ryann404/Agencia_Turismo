@@ -1,0 +1,426 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&family=Caacupe+One&family=Michroma&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* o border box evita que o quadrado passe do tamanho da borda */
+}
+body{
+    font-family: montserrat;
+    background-image: linear-gradient(135deg, #fdfdfd, #ffb82b);
+    /* background-image: url(luca-bravo-O453M2Liufs-unsplash.jpg); */
+    /* color: #f3f3f3; */
+    line-height: 1px;
+    /* espaçamento entre as linhas */
+}
+.cabecalho{
+    
+    z-index: 1;
+    /* deixa na frente */
+    position:fixed;
+    /* mantém o topo depois que tira 
+    se deixar como sticky, ele ocupa um espaço no topo,
+    nao fiz isso pq ia ficar um laranja esquisito*/
+    backdrop-filter: blur(10px);
+    /* deixa o fundo borrado */
+    width: 100%;
+    /* completa toda a largura (tava + curto) */
+    
+    /* border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px; */
+    /* esses 2 sao pra deixae apenas a borda debaixo aparecendo */
+        
+    border-radius: 20px;
+    top: 10px;
+    /* deixa no topo, se aumentar, fica voando */
+    border: 1px solid #f3f3f3;
+    /* eu q fiz viu */
+
+
+
+    display: flex;
+    justify-content: space-between;
+    /* background-image: linear-gradient(45deg, #bcda27, #dbc00eab); */
+    border-bottom: 1px solid #f3f3f3;
+    align-items: center;
+    padding: 15px 40px;
+    color: #f3f3f3;
+    max-height: 200px;
+}
+.logo{
+    gap: 15px;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    /* box-shadow: #f3f3f3 300px; */
+    color: rgb(220, 180, 0);
+}
+.navegacao{
+    gap: 35px;
+    display: flex;
+    /* se tira isso, eles ficam colados */
+    align-items: center;
+    transition: 0.3s;
+}
+.menu-links a{
+    text-decoration: none;
+    color: #f09800;
+    font-size: 20px;
+    margin: 0 15px;
+    /* esse 15px faz o espaçamento entre eles */
+    font-weight: bold;
+    /* se botar 500, ele fica mais leve q o bold */
+    /* transition: color 0.3s ease; */
+}
+.menu-links a:hover{
+    color: #ff9101;
+    transition: 0.3s ease;
+    font-size: 23px;
+}
+.redes-sociais{
+    gap: 14px;
+    display: flex;
+    border-left: 1px solid #f3f3f3;
+    padding-left: 30px;
+    display: flex;
+}
+.redes-sociais a{
+    transition: 0.3s;
+    color: #f3f3f3;
+    font-size: 20px;
+    /* tamaho do paranaue */
+    text-decoration: none;
+    cursor: pointer;
+}
+.redes-sociais a:hover{
+    transform: scale(1.4);
+    /* font-size nao funciona, tem que ser nisso */
+    transition: 0.3s;
+}
+
+.redes-sociais a.whatsapp:hover{
+    color: #0eef12;
+}
+.redes-sociais a.facebook:hover{
+    color: #0e1def;
+}
+.redes-sociais a.instagram:hover{
+    background-image: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+    /* muda o fundo pra esse gradiente */
+    background-clip: text;
+    /* muda o formato do gradiente pra caber no texto (imagem) */
+    color: transparent;
+    /* muda o texto pra transparente (o fundo aparece) */
+}
+.redes-sociais a.twitter:hover{
+    color: #0e95ef;
+}
+.banner{
+    position: relative;
+    width: 100%;
+    height: 700px;
+}
+.imagem{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* pra imagem nao ficar muito esticada, entao ela corta as bordas pra nao achatar a imagem */
+    filter: brightness(0.75);
+    /* escurece um pouco da imagem */
+
+}
+.texto{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* ainda fica meio torto.. */
+    transform: translate(-50%, -50%);
+    /* aí ss */
+    /* text-align: center;
+    color: #f3f3f3; */
+}
+.texto h1{
+    font-size: 36px;
+    margin-bottom: 10px;
+    text-shadow: 0 2px 8px #f1e9e3;
+    color: #f3f3f3;
+}
+.texto p{
+    font-size: 16px;
+    margin-top: 15%;
+    /* nao ta ficando com espaco, entao vai na raça msm kkkkkkkkk */
+    text-shadow: 0 2px 8px #ffffff;
+    text-align: center;
+    color: #f1e9e3;
+}
+.container{
+    max-width: 900px;
+    /* de 900px ele n passa */
+    text-align: center;
+    margin: 50px auto;
+    /* centraliza */
+}
+.titulo{
+    font-size: 26px;
+    color: #fcfcfc;
+    text-shadow: 20px #f3f3f3;
+    margin-bottom: 30px;
+/*  naaaao vaaaai
+    background-size: 400px 400px 400px 400px;
+    background-image: linear-gradient(#fff, #000);
+    background-clip: text;
+    color: transparent */
+}
+.subtitulo{
+    font-size: 14px;
+    color: #808080;
+    margin-bottom: 30px;
+}
+.foto{
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+.foto1{
+    max-width: 420px;
+    /* define o tamain */
+    height: 300px;
+    object-fit: cover;
+    /* pra n distorcer a foto */
+    border-radius: 12px;
+}
+.legenda{
+    margin-top: 30px;
+}
+.rodape{
+    background-color: #fec712;
+    color: #f3f3f3;
+    text-align: center;
+    padding: 15px 40px;
+    font-size: 14px;
+    margin-top: 60px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    /* backdrop-filter: blur(10px);
+    bottom: 0;
+    z-index: 2;
+    position: fixed;
+    width: 100%; */
+}
+
+.cabecalhoDestino{
+    z-index: 1;
+    top: 15px;
+    border: 1px solid #f3f3f3;
+    position:fixed;
+    backdrop-filter: blur(10px);
+    width: 100%;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    color: #302f2f;
+    max-height: 200px;
+    background: #ffff023c;
+}
+.bannerDestinos{
+    position: relative;
+    width: 100%;
+    height: 700px;
+    background-image: radial-gradient(#f8f800, #c37800);    
+}
+.containerDestino{
+    margin-top: 50px;
+    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    flex-direction: column;
+    align-items: center;
+    margin-left: 50px;
+}
+.cardDestino{
+    /* display: flex; */
+    width: 300px;
+    height: 500px;
+    background-image: radial-gradient(#fff, #eac300);
+    border-radius: 20px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    text-align: center; 
+    transition: 0.3s;
+    /* color: transparent; */
+}
+.cardDestino:hover{
+    transition: 0.3s;
+    display: hidden;
+    padding-bottom: 720px;
+    .tituloCard{
+        color: transparent;
+        transition: 0.3s;
+    }
+    .descricaoLocalCardDestino{
+        transition: 0.3s;
+        color: #302f2f;
+        line-height: 20px;
+    }
+}
+
+.imagemDestino{
+    border-radius: 20px;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.descricaoLocalCardDestino{
+    /* color: #000;    */
+    transition: color 0.3s;
+    color: transparent;
+    /* visibility: hidden; */
+}
+.descricaoLocalCardDestino:hover{
+    color: #302f2f;
+    visibility: visible;
+}
+/* .tituloCard{
+    color: #1c1b1b;
+} */
+/* .tituloCard:hover{
+    /* visibility: inherit */
+    /* visibility: hidden;
+    /* color: transparent; */
+/* } */ 
+
+.tituloContainer{
+    margin-top: 100px;
+    font-size: 20px;
+    color: #302f2f;
+    text-align: center;
+}
+.principalSobre{
+    position: relative;
+    width: 100%;
+    height: 700px;
+    /* background-image: url(aaaaaaa.jpg) */
+    gap: 35px;
+    display: flex;
+
+}
+
+.logoSobre{
+    width: 500px;
+    height: 500px;
+    border-radius: 500px;
+    margin-left: 50%;
+    position: absolute;
+    margin-top: 150px;
+    z-index: 10;
+}
+.detalhesSobre{
+    color: #302f2f;
+    margin-top: 200px;
+    font-size: 30px;
+    max-width: 40ch;
+    /* tamanho total do paranaue */
+    color: #ecb305;
+    text-shadow: #fffefe 20px ;
+    position:absolute;
+    z-index: 11;
+    font-weight: bold;
+}
+.tituloSobre{
+    margin-top: 120px;
+    color: #302f2f;
+    font-size: 140px;
+    font-family: caacupe one;
+    font-weight: 400;
+    position: absolute;
+}
+
+.escrita{
+    margin-left: 100px;
+    margin-top: 10px;
+    line-height: 50px;
+    /* define a distancia entre as linhas */
+}
+.principalContato{
+    position: relative;
+    width: 100%;
+    height: 700px;
+    background-image: linear-gradient(45deg, #fdfdfd, #ffb82b);
+    gap: 35px;
+    display: flex;
+}
+/* .imgContato{
+    width: 100%;
+    object-fit: cover;
+} */
+/* .tituloContato{
+    text-align: center;
+    z-index: 20;
+    text-shadow: 0 2px 8px #f1e9e3;
+    position: absolute;
+    top: 250px;
+    color: #f3f3f3;
+    left: 50%;
+    /* ainda fica meio torto.. 
+    transform: translate(-50%, -50%);
+} */
+.tituloContato{
+    text-align: center;
+    text-shadow: 0 2px 8px #f1e9e3;
+    position: absolute;
+    top: 150px;
+    color: #f3f3f3;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* .secaoContato{} */
+
+.secaoContato{
+    text-align: center;
+    display: absolute;
+    padding: 20px;
+    background-color: #f09800;
+    margin-top: 200px;
+    margin-left: 20%;
+    width: 800px;
+    height: 450px;
+}
+input, ::placeholder{
+    border-top: 5px solid white;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #947e00;
+    height: 30px;
+}
+select{
+    margin-top: 20px;
+    border-radius: 5px;
+}
+option{
+    border: 1px solid #f3f3f3;
+    font-size: 20px;
+    transition: 0.5s;
+}
+button{
+    margin-top: 40px;
+    margin-left: 20px;
+    padding: 15px;
+    background-color: #ecb305;
+    border: 1px solid white;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+button:hover{
+    background-color: #dbd8cf;
+    transition: 0.3s;
+    cursor: pointer;
+}
