@@ -336,7 +336,7 @@ body{
 .tituloSobre{
     margin-top: 120px;
     color: #302f2f;
-    font-size: 140px;
+    font-size: 150px;
     font-family: caacupe one;
     font-weight: 400;
     position: absolute;
@@ -348,11 +348,13 @@ body{
     line-height: 50px;
     /* define a distancia entre as linhas */
 }
+.bodyContato{
+    background-image: linear-gradient(45deg, #fdfdfd, #ffb82b);
+}
 .principalContato{
     position: relative;
     width: 100%;
-    height: 700px;
-    background-image: linear-gradient(45deg, #fdfdfd, #ffb82b);
+    height: 100%;
     gap: 35px;
     display: flex;
 }
@@ -394,12 +396,13 @@ body{
     height: 450px;
 }
 input, ::placeholder{
-    border-top: 5px solid white;
+    border: 5px solid white;
     width: 100%;
     margin-top: 10px;
     margin-bottom: 10px;
     color: #947e00;
     height: 30px;
+    border-radius: 10px;
 }
 select{
     margin-top: 20px;
